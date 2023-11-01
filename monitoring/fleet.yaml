@@ -37,14 +37,6 @@ diff:
     name: rancher-monitoring-admission
     jsonPointers:
     - "/webhooks"    
-  - apiVersion: policy/v1beta1
-    kind: PodSecurityPolicy
-    operations:
-    - {"op":"remove", "path":"/spec/hostIPC"}
-    - {"op":"remove", "path":"/spec/hostNetwork"}
-    - {"op":"remove", "path":"/spec/hostPID"}
-    - {"op":"remove", "path":"/spec/privileged"}
-    - {"op":"remove", "path":"/spec/readOnlyRootFilesystem"}
   - apiVersion: apps/v1
     kind: Deployment
     name: rancher-monitoring-grafana
